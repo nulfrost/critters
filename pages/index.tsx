@@ -12,7 +12,12 @@ const posts = Array.from({ length: 20 }, (post: Post) => ({
     "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
   ],
   pet_status: "LOST",
-  location: "Toronto",
+  location: JSON.stringify({
+    city: "Toronto",
+    intersection: "Jane & Wilson",
+    lat: "43.7208856",
+    lng: "-79.510727",
+  }),
   posted_by: "Dane",
   created_at: new Date().toISOString(),
   updated_at: new Date().toISOString(),
