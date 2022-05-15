@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "generate": "export $(cat .env | xargs) && npx openapi-typescript \"${NEXT_PUBLIC_SUPABASE_URL}/rest/v1/?apikey=${NEXT_PUBLIC_SUPABASE_ANON_KEY}\" --output types/supabase.ts",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "show": "echo $NEXT_PUBLIC_SUPABASE_URL"
   },
   "dependencies": {
     "@supabase/supabase-auth-helpers": "^1.4.1",
