@@ -9,6 +9,7 @@ specifiers:
   '@types/react-dom': 18.0.4
   autoprefixer: ^10.4.7
   clsx: ^1.1.1
+  csstype: ^3.0.10
   date-fns: ^2.28.0
   eslint: 8.15.0
   eslint-config-next: 12.1.6
@@ -16,6 +17,7 @@ specifiers:
   postcss: ^8.4.13
   react: 18.1.0
   react-dom: 18.1.0
+  react-hot-toast: ^2.2.0
   react-icons: ^4.3.1
   tailwindcss: ^3.0.24
   typescript: 4.6.4
@@ -28,6 +30,7 @@ dependencies:
   next: 12.1.6_ef5jwxihqo6n7gxfmzogljlgcm
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
+  react-hot-toast: 2.2.0_mlvwwyo42ximsrazg6upia4tq4
   react-icons: 4.3.1_react@18.1.0
 
 devDependencies:
@@ -36,6 +39,7 @@ devDependencies:
   '@types/react': 18.0.9
   '@types/react-dom': 18.0.4
   autoprefixer: 10.4.7_postcss@8.4.13
+  csstype: 3.0.11
   eslint: 8.15.0
   eslint-config-next: 12.1.6_6vdljae35l7howjttefzzsim3e
   postcss: 8.4.13
@@ -1322,6 +1326,14 @@ packages:
       slash: 3.0.0
     dev: true
 
+  /goober/2.1.9_csstype@3.0.11:
+    resolution: {integrity: sha512-PAtnJbrWtHbfpJUIveG5PJIB6Mc9Kd0gimu9wZwPyA+wQUSeOeA4x4Ug16lyaaUUKZ/G6QEH1xunKOuXP1F4Vw==}
+    peerDependencies:
+      csstype: ^3.0.10
+    dependencies:
+      csstype: 3.0.11
+    dev: false
+
   /has-bigints/1.0.2:
     resolution: {integrity: sha512-tSvCKtBr9lkF0Ex0aQiP9N+OpV4zi2r/Nee5VkRDbaqv35RLYMzbwQfFSZZH0kR+Rd6302UJZ2p/bJCEoR3VoQ==}
     dev: true
@@ -1951,6 +1963,20 @@ packages:
       loose-envify: 1.4.0
       react: 18.1.0
       scheduler: 0.22.0
+    dev: false
+
+  /react-hot-toast/2.2.0_mlvwwyo42ximsrazg6upia4tq4:
+    resolution: {integrity: sha512-248rXw13uhf/6TNDVzagX+y7R8J183rp7MwUMNkcrBRyHj/jWOggfXTGlM8zAOuh701WyVW+eUaWG2LeSufX9g==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=16'
+      react-dom: '>=16'
+    dependencies:
+      goober: 2.1.9_csstype@3.0.11
+      react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
+    transitivePeerDependencies:
+      - csstype
     dev: false
 
   /react-icons/4.3.1_react@18.1.0:

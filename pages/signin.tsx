@@ -5,16 +5,16 @@ import { AiOutlineGoogle } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
 import { SocialButton } from "@/components/Elements";
 
-const Signup = () => {
+const Signin = () => {
   return (
     <section className="mt-32">
       <div className="text-center mb-10">
-        <h1 className="font-bold text-4xl mb-3">Sign up for an account</h1>
+        <h1 className="font-bold text-4xl mb-3">Sign in to your account</h1>
         <p>
-          Already have an account?{" "}
-          <Link href="/signin">
+          No account?{" "}
+          <Link href="/signup">
             <a className="text-indigo-800 hover:underline hover:text-indigo-600">
-              Sign in here
+              Sign up here
             </a>
           </Link>
         </p>
@@ -38,7 +38,7 @@ const Signup = () => {
             type="submit"
             className="bg-indigo-800 text-white w-full py-2 rounded-md hover:bg-indigo-600 duration-150"
           >
-            Sign up
+            Sign in
           </button>
           <div className="flex my-5 before:content-[''] before:flex-1 before:border before:border-t-gray-300 items-center before:mr-[10px] after:content-[''] after:flex-1 after:border after:border-t-gray-300 after:ml-[10px] text-gray-400">
             <span className="text-xs">or continue with</span>
@@ -61,8 +61,8 @@ const Signup = () => {
   );
 };
 
-Signup.getLayout = function getLayout(page: ReactElement) {
+Signin.getLayout = function getLayout(page: ReactElement) {
   return <MainLayout>{page}</MainLayout>;
 };
 
-export default Signup;
+export default Signin;
