@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@supabase/supabase-auth-helpers': ^1.4.1
   '@supabase/supabase-js': ^1.35.3
+  '@tailwindcss/forms': ^0.5.1
   '@types/node': 17.0.33
   '@types/react': 18.0.9
   '@types/react-dom': 18.0.4
@@ -15,6 +16,7 @@ specifiers:
   postcss: ^8.4.13
   react: 18.1.0
   react-dom: 18.1.0
+  react-icons: ^4.3.1
   tailwindcss: ^3.0.24
   typescript: 4.6.4
 
@@ -26,8 +28,10 @@ dependencies:
   next: 12.1.6_ef5jwxihqo6n7gxfmzogljlgcm
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
+  react-icons: 4.3.1_react@18.1.0
 
 devDependencies:
+  '@tailwindcss/forms': 0.5.1_tailwindcss@3.0.24
   '@types/node': 17.0.33
   '@types/react': 18.0.9
   '@types/react-dom': 18.0.4
@@ -293,6 +297,15 @@ packages:
       - encoding
       - supports-color
     dev: false
+
+  /@tailwindcss/forms/0.5.1_tailwindcss@3.0.24:
+    resolution: {integrity: sha512-QSwsFORnC2BAP0lRzQkz1pw+EzIiiPdk4e27vGQjyXkwJPeC7iLIRVndJzf9CJVbcrrIcirb/TfxF3gRTyFEVA==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
+    dependencies:
+      mini-svg-data-uri: 1.4.4
+      tailwindcss: 3.0.24
+    dev: true
 
   /@types/json5/0.0.29:
     resolution: {integrity: sha1-7ihweulOEdK4J7y+UnC86n8+ce4=}
@@ -1585,6 +1598,11 @@ packages:
       picomatch: 2.3.1
     dev: true
 
+  /mini-svg-data-uri/1.4.4:
+    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
+    hasBin: true
+    dev: true
+
   /minimatch/3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
     dependencies:
@@ -1933,6 +1951,14 @@ packages:
       loose-envify: 1.4.0
       react: 18.1.0
       scheduler: 0.22.0
+    dev: false
+
+  /react-icons/4.3.1_react@18.1.0:
+    resolution: {integrity: sha512-cB10MXLTs3gVuXimblAdI71jrJx8njrJZmNMEMC+sQu5B/BIOmlsAjskdqpn81y8UBVEGuHODd7/ci5DvoSzTQ==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 18.1.0
     dev: false
 
   /react-is/16.13.1:
