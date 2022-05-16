@@ -11,7 +11,7 @@ const posts = Array.from({ length: 20 }, (post: Post) => ({
   images: [
     "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
   ],
-  pet_status: "LOST",
+  pet_status: "FOUND",
   location: JSON.stringify({
     city: "Toronto",
     intersection: "Jane & Wilson",

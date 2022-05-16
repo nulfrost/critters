@@ -69,7 +69,7 @@ const Signup = () => {
           />
           <button
             type="submit"
-            className="bg-indigo-800 text-white w-full py-2 rounded-md hover:bg-indigo-600 duration-150"
+            className="bg-indigo-800 text-white w-full py-2 rounded-md hover:bg-indigo-600 duration-150 focus:outline focus-visible:outline-4 focus-visible:outline-offset-2"
           >
             Sign up
           </button>

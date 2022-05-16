@@ -11,6 +11,7 @@
     "show": "echo $NEXT_PUBLIC_SUPABASE_URL"
   },
   "dependencies": {
+    "@headlessui/react": "^1.6.1",
     "@supabase/supabase-auth-helpers": "^1.4.1",
     "@supabase/supabase-js": "^1.35.3",
     "clsx": "^1.1.1",

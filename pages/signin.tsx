@@ -1,10 +1,11 @@
 import { MainLayout } from "@/components/Layout";
 import Link from "next/link";
-import { ReactElement } from "react";
+import { FormEvent, ReactElement } from "react";
 import { AiOutlineGoogle } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
 import { SocialButton } from "@/components/Elements";
 import supabase from "@/lib/supbase";
+import toast from "react-hot-toast";
 
 const Signin = () => {
   return (
@@ -21,7 +22,37 @@ const Signin = () => {
         </p>
       </div>
       <div className="max-w-sm mx-auto bg-white py-5 px-5 rounded-md shadow-md">
-        <form>
+        <form
+          onSubmit={async (event: FormEvent<HTMLFormElement>) => {
+            event.preventDefault();
+            let { error } = await supabase.auth.signIn({
+              // @ts-ignore
+              email: event.target.elements.email.value,
+            });
+            if (error) {
+              toast.error(error.message, {
+                position: "top-center",
+                duration: 4000,
+                ariaProps: {
+                  role: "alert",
+                  "aria-live": "assertive",
+                },
+              });
+              return;
+            }
+            toast.success(
+              "A link has been sent to your e-mail, please use it to log in to critters!",
+              {
+                position: "top-center",
+                duration: 4000,
+                ariaProps: {
+                  role: "alert",
+                  "aria-live": "assertive",
+                },
+              }
+            );
+          }}
+        >
           <label
             htmlFor="email"
             className="block text-xs font-bold text-gray-500 uppercase"
@@ -37,7 +68,7 @@ const Signin = () => {
           />
           <button
             type="submit"
-            className="bg-indigo-800 text-white w-full py-2 rounded-md hover:bg-indigo-600 duration-150"
+            className="bg-indigo-800 text-white w-full py-2 rounded-md hover:bg-indigo-600 duration-150 focus:outline focus-visible:outline-4 focus-visible:outline-offset-2"
           >
             Sign in
           </button>
@@ -64,6 +95,15 @@ const Signin = () => {
             icon={<FaFacebook className="text-white" />}
             label="Sign up with Facebook"
             classNames="bg-blue-600"
+            onLogin={async () => {
+              try {
+                await supabase.auth.signIn({
+                  provider: "facebook",
+                });
+              } catch (error) {
+                console.error(error);
+              }
+            }}
           />
         </div>
       </div>

@@ -44,7 +44,7 @@ export const Navbar = () => {
               </li>
               <li>
                 <Link href="/signup">
-                  <a className="bg-indigo-800 text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-600 duration-150">
+                  <a className="bg-indigo-800 text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-600 duration-150 focus:outline focus-visible:outline-4 focus-visible:outline-offset-2">
                     Sign up
                   </a>
                 </Link>
