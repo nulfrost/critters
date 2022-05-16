@@ -4,6 +4,7 @@ import { ReactElement } from "react";
 import { AiOutlineGoogle } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
 import { SocialButton } from "@/components/Elements";
+import supabase from "@/lib/supbase";
 
 const Signin = () => {
   return (
@@ -49,6 +50,15 @@ const Signin = () => {
             icon={<AiOutlineGoogle className="text-white" />}
             label="Sign up with Google"
             classNames="bg-red-600"
+            onLogin={async () => {
+              try {
+                await supabase.auth.signIn({
+                  provider: "google",
+                });
+              } catch (error) {
+                console.error(error);
+              }
+            }}
           />
           <SocialButton
             icon={<FaFacebook className="text-white" />}

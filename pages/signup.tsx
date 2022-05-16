@@ -82,11 +82,29 @@ const Signup = () => {
             icon={<AiOutlineGoogle className="text-white" />}
             label="Sign up with Google"
             classNames="bg-red-600"
+            onLogin={async () => {
+              try {
+                await supabase.auth.signIn({
+                  provider: "google",
+                });
+              } catch (error) {
+                console.error(error);
+              }
+            }}
           />
           <SocialButton
             icon={<FaFacebook className="text-white" />}
             label="Sign up with Facebook"
             classNames="bg-blue-600"
+            onLogin={async () => {
+              try {
+                await supabase.auth.signIn({
+                  provider: "facebook",
+                });
+              } catch (error) {
+                console.error(error);
+              }
+            }}
           />
         </div>
       </div>
