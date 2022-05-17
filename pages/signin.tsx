@@ -10,8 +10,8 @@ import toast from "react-hot-toast";
 const Signin = () => {
   return (
     <section className="mt-32">
-      <div className="text-center mb-10">
-        <h1 className="font-bold text-4xl mb-3">Sign in to your account</h1>
+      <div className="mb-10 text-center">
+        <h1 className="mb-3 text-4xl font-bold">Sign in to your account</h1>
         <p>
           No account?{" "}
           <Link href="/signup">
@@ -21,7 +21,7 @@ const Signin = () => {
           </Link>
         </p>
       </div>
-      <div className="max-w-sm mx-auto bg-white py-5 px-5 rounded-md shadow-md">
+      <div className="max-w-sm px-5 py-5 mx-auto bg-white rounded-md shadow-md">
         <form
           onSubmit={async (event: FormEvent<HTMLFormElement>) => {
             event.preventDefault();
@@ -41,7 +41,7 @@ const Signin = () => {
               return;
             }
             toast.success(
-              "A link has been sent to your e-mail, please use it to log in to critters!",
+              "Magic link sent to your email! Use the link to sign in. (Could be in your spam folder too!)",
               {
                 position: "top-center",
                 duration: 4000,
@@ -60,15 +60,16 @@ const Signin = () => {
             Email address
           </label>
           <input
+            id="email"
             type="email"
             autoComplete="email"
             required
             aria-required="true"
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 mb-2"
+            className="block w-full mt-1 mb-2 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
           />
           <button
             type="submit"
-            className="bg-indigo-800 text-white w-full py-2 rounded-md hover:bg-indigo-600 duration-150 focus:outline focus-visible:outline-4 focus-visible:outline-offset-2"
+            className="w-full py-2 text-white duration-150 bg-indigo-800 rounded-md hover:bg-indigo-600 focus:outline focus-visible:outline-4 focus-visible:outline-offset-2"
           >
             Sign in
           </button>
