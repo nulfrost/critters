@@ -5,29 +5,36 @@ export const Navbar = () => {
   const { user } = useUser();
 
   return (
-    <header className="bg-white py-5 mb-10 drop-shadow-sm px-2 xl:px-0">
-      <nav className="max-w-7xl mx-auto flex">
-        <h1>critters</h1>
+    <header className="px-2 py-5 bg-white drop-shadow-sm xl:px-0">
+      <nav className="flex mx-auto max-w-7xl" aria-label="main site navigation">
+        <Link href="/">
+          <a
+            className="text-xl font-bold"
+            aria-label="Navigate back to the main page"
+          >
+            critters
+          </a>
+        </Link>
         <ul className="flex ml-auto gap-7">
           {user ? (
             <>
               <li>
                 <Link href="/">
-                  <a className="text-gray-500 hover:text-indigo-700 duration-150">
+                  <a className="text-gray-500 duration-150 hover:text-indigo-700">
                     Listings
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/account">
-                  <a className="text-gray-500 hover:text-indigo-700 duration-150">
+                  <a className="text-gray-500 duration-150 hover:text-indigo-700">
                     Account
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/api/auth/logout">
-                  <a className="text-gray-500 hover:text-indigo-700 duration-150">
+                  <a className="text-gray-500 duration-150 hover:text-indigo-700">
                     Sign out
                   </a>
                 </Link>
@@ -37,14 +44,14 @@ export const Navbar = () => {
             <>
               <li>
                 <Link href="/signin">
-                  <a className="text-gray-500 hover:text-indigo-700 duration-150">
+                  <a className="text-gray-500 duration-150 hover:text-indigo-700">
                     Sign in
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/signup">
-                  <a className="bg-indigo-800 text-white py-3 px-4 rounded-md font-bold hover:bg-indigo-600 duration-150 focus:outline focus-visible:outline-4 focus-visible:outline-offset-2">
+                  <a className="px-4 py-2 text-white duration-150 bg-indigo-800 rounded-md hover:bg-indigo-600 focus:outline focus-visible:outline-4 focus-visible:outline-offset-2">
                     Sign up
                   </a>
                 </Link>

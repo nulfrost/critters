@@ -6,9 +6,6 @@ import { FaFacebook } from "react-icons/fa";
 import { SocialButton } from "@/components/Elements";
 import supabase from "@/lib/supbase";
 import toast, { Toaster } from "react-hot-toast";
-import { HiInformationCircle } from "react-icons/hi";
-import { GrFormClose } from "react-icons/gr";
-import { BiError } from "react-icons/bi";
 
 const Signup = () => {
   return (

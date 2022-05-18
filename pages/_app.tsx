@@ -1,4 +1,4 @@
-import { Navbar } from "@/components/Layout";
+import { Navbar, Footer } from "@/components/Layout";
 import { supabaseClient } from "@supabase/supabase-auth-helpers/nextjs";
 import { UserProvider } from "@supabase/supabase-auth-helpers/react";
 import { NextPage } from "next";
@@ -20,6 +20,13 @@ function MyApp({ Component, pageProps }: AppPropsWithoutLayout) {
     <UserProvider supabaseClient={supabaseClient}>
       <Navbar />
       {getLayout(<Component {...pageProps} />)}
+      <Footer
+        links={[
+          { label: "about", path: "/about" },
+          { label: "contact", path: "/contact" },
+          { label: "faq", path: "/faq" },
+        ]}
+      />
     </UserProvider>
   );
 }

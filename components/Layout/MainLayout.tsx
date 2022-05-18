@@ -5,5 +5,7 @@ type Props = {
 };
 
 export const MainLayout = ({ children }: Props) => {
-  return <main className="max-w-7xl mx-auto px-2 xl:px-0">{children}</main>;
+  return (
+    <main className="px-2 py-10 mx-auto max-w-7xl xl:px-0">{children}</main>
+  );
 };
