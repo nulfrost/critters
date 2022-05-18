@@ -1,5 +1,5 @@
 import { MainLayout } from "@/components/Layout";
-import { Post } from "@/features/posts";
+import type { Post } from "@/features/posts";
 import { Posts } from "@/features/posts/components/Posts";
 import type { ReactElement } from "react";
 
@@ -26,6 +26,7 @@ const posts = Array.from({ length: 20 }, (post: Post) => ({
 const Home = () => {
   return (
     <>
+      <h1 className="mb-5 text-3xl font-bold">Listings</h1>
       <Posts posts={posts} />
     </>
   );
