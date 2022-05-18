@@ -11,7 +11,7 @@ const posts = Array.from({ length: 20 }, (post: Post) => ({
   images: [
     "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
   ],
-  pet_status: "FOUND",
+  pet_status: "LOST",
   location: JSON.stringify({
     city: "Toronto",
     intersection: "Jane & Wilson",
@@ -26,7 +26,7 @@ const posts = Array.from({ length: 20 }, (post: Post) => ({
 const Home = () => {
   return (
     <>
-      <h1 className="mb-5 text-3xl font-bold">Listings</h1>
+      <h1 className="mb-5 text-4xl font-bold">Listings</h1>
       <Posts posts={posts} />
     </>
   );

@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const PostCard = ({ post }: { post: Post }) => {
   return (
-    <article className="border border-gray-300 rounded-md overflow-hidden bg-white shadow-sm relative">
+    <article className="relative overflow-hidden bg-white border border-gray-300 rounded-md shadow-sm">
       <Image
         src={post.images[0] as string}
         height={300}
@@ -24,10 +24,10 @@ export const PostCard = ({ post }: { post: Post }) => {
         {post.pet_status}
       </span>
       <div className="px-5 py-4">
-        <div className="flex items-center mb-2 justify-between">
-          <h2 className="font-bold text-2xl text-gray-900">{post.name}</h2>
+        <div className="flex items-center justify-between mb-2">
+          <h2 className="text-2xl font-bold text-gray-900">{post.name}</h2>
           <Link href={`/post/${post.id}`}>
-            <a className="inline-block text-xs uppercase font-bold hover:underline text-indigo-700">
+            <a className="inline-block text-xs font-bold text-indigo-700 uppercase hover:underline">
               View more &rarr;
             </a>
           </Link>
@@ -37,7 +37,7 @@ export const PostCard = ({ post }: { post: Post }) => {
             {post.description}
           </p>
         </section>
-        <footer className="flex text-gray-500 text-xs justify-between">
+        <footer className="flex justify-between text-xs text-gray-500">
           <p>{JSON.parse(post.location).city}</p>
           <p>
             {" "}
